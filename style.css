@@ -1,0 +1,145 @@
+:root {
+  /* color */
+  --white: #ffffff;
+  --black: ##18181b;
+  --blue: #0057b8;
+  --yellow: #ffd700;
+  --grey: #71717a;
+  --grey-lighter: #f4f4f5;
+  --grey-border: #e4e4e7;
+  --btn-color: #292ada;
+  /* fontFamily */
+  --ff-primary: 'Gilroy', -apple-system, 'BlinkMacSystemFont', 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  --transition: all 0.3s ease-in-out;
+  --spacing: -0.02em;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-style: normal;
+  background: var(--white);
+  color: var(--black);
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: var(--spacing);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 90%;
+  }
+  .header {
+    margin-top: 1.6rem;
+    padding: 1.6rem 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #d4d4d8;
+  }
+  .name {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 3.3rem;
+  }
+  .position {
+    color: var(--grey);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.1rem;
+  }
+
+  .subtitle {
+    margin: 3.2rem 0 0.8rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+  }
+  .get-to-know {
+    margin-bottom: 3rem;
+  }
+  .bg-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.6rem;
+    height: 34.5rem;
+    background-color: var(--grey-lighter);
+    border-radius: 1.2rem;
+    -webkit-border-radius: 1.2rem;
+    -moz-border-radius: 1.2rem;
+    -ms-border-radius: 1.2rem;
+    -o-border-radius: 1.2rem;
+    border: 0.187612px solid var(--grey-border);
+  }
+  .bg-img > img {
+    max-width: 70%;
+    height: auto;
+    margin: auto;
+  }
+  .link {
+    position: absolute;
+    padding: 1.2rem;
+    border-radius: 10rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: var(--white);
+    background-color: var(--btn-color);
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+  }
+}
