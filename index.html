@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email</title>
-    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
     <style>
       @font-face {
         font-family: 'Gilroy';
@@ -230,14 +230,11 @@
       .get-to-know {
         margin-bottom: 3.2rem;
       }
-
-      .bg-img {
-        position: relative;
+      .bg-img-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 1.6rem;
-        height: 43rem;
         background-color: var(--grey-lighter);
         border-radius: 1.2rem;
         -webkit-border-radius: 1.2rem;
@@ -246,13 +243,18 @@
         -o-border-radius: 1.2rem;
         border: 0.187612px solid var(--grey-border);
       }
-      .bg-img > img {
-        max-width: 90%;
-      }
       .link {
+        position: relative;
+        margin: 2.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .link-btn {
         position: absolute;
         padding: 1.2rem 1.6rem;
         border-radius: 10rem;
+        border: transparent;
         font-weight: 600;
         font-size: 2rem;
         line-height: 2.38rem;
@@ -262,6 +264,11 @@
         -moz-border-radius: 10rem;
         -ms-border-radius: 10rem;
         -o-border-radius: 10rem;
+        cursor: pointer;
+      }
+      .btn-image {
+        max-width: 60%;
+        aspect-ratio: 1.2 / 1;
       }
 
       @media only screen and (min-width: 375px) and (max-width: 767px) {
@@ -292,13 +299,12 @@
         .get-to-know {
           margin-bottom: 3rem;
         }
-        .bg-img {
-          position: relative;
+
+        .bg-img-wrapper {
           display: flex;
           justify-content: center;
           align-items: center;
           margin-bottom: 1.6rem;
-          height: 34.5rem;
           background-color: var(--grey-lighter);
           border-radius: 1.2rem;
           -webkit-border-radius: 1.2rem;
@@ -307,15 +313,18 @@
           -o-border-radius: 1.2rem;
           border: 0.187612px solid var(--grey-border);
         }
-        .bg-img > img {
-          max-width: 70%;
-          height: auto;
-          margin: auto;
-        }
         .link {
+          position: relative;
+          margin: 2.4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .link-btn {
           position: absolute;
           padding: 1.2rem;
           border-radius: 10rem;
+          border: transparent;
           font-weight: 600;
           font-size: 1.8rem;
           line-height: 2.1rem;
@@ -325,6 +334,11 @@
           -moz-border-radius: 10rem;
           -ms-border-radius: 10rem;
           -o-border-radius: 10rem;
+          cursor: pointer;
+        }
+        .btn-image {
+          max-width: 60%;
+          aspect-ratio: 1.2 / 1;
         }
       }
     </style>
@@ -393,13 +407,31 @@
         </p>
       </section>
       <section class="img-wrapper">
-        <div class="summary bg-img">
-          <img src="./Summary.png" alt="summary" />
-          <a class="link" href="#">Резюме</a>
+        <div class="bg-img-wrapper">
+          <a
+            class="link"
+            target="_blank"
+            href="https://drive.google.com/file/d/1-70ZYOC_-RfSHvD9PQ9awT1nY1KYfO6Y/view?usp=share_link"
+            ><img
+              class="btn-image"
+              src="https://kolosov-email.netlify.app/Summary.png"
+              alt="summary"
+            />
+            <button class="link-btn">Резюме</button>
+          </a>
         </div>
-        <div class="portfolio bg-img">
-          <img src="./Portfolio.png" alt="portfolio" />
-          <a class="link" href="#">Портфоліо</a>
+        <div class="bg-img-wrapper">
+          <a
+            class="link"
+            target="_blank"
+            href="https://dmtkolosov.notion.site/Dmytro-Kolosov-2b8dc3610caf4671a336ead038554f54"
+            ><img
+              class="btn-image"
+              src="https://kolosov-email.netlify.app/Portfolio.png"
+              alt="portfolio"
+            />
+            <button class="link-btn">Портфоліо</button>
+          </a>
         </div>
       </section>
     </div>
